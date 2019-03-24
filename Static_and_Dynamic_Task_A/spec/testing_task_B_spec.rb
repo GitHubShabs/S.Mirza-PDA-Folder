@@ -6,9 +6,9 @@ require_relative('../card_game')
 class TestCardGame < MiniTest::Test
 
   def setup()
-    @card1 = Card.new('hearts', 3)
-    @card2 = Card.new('spades', 2)
-    @card3 = Card.new('diamonds', 1)
+    @card1 = Card.new('hearts', 10)
+    @card2 = Card.new('spades', 7)
+    @card3 = Card.new('diamonds', 8)
     @cards = [@card1, @card2, @card3]
     @game1 = CardGame.new()
   end
@@ -24,7 +24,7 @@ class TestCardGame < MiniTest::Test
   end
 
   def test_cards_total
-    assert_equal("You have a total of 6", CardGame.cards_total(@cards))
+    assert_equal("You have a total of 25", CardGame.cards_total(@cards))
   end
 
 
